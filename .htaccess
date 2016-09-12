@@ -1,0 +1,10 @@
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteRule  ^$ public/     [L] # empty request uri
+
+  # make sure we are not requesting a public file in a module
+  RewriteCond %{REQUEST_URI} !^/app/modules/([^/]+)/public/(.+)$
+  RewriteRule  (.*) public/$1 [L]
+</IfModule>

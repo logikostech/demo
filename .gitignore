@@ -1,0 +1,7 @@
+cache/
+vendor/
+composer.phar
+public/vendor/
+public/error_log
+app/config/.env
+tests/_output/*

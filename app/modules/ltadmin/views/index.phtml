@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7 ]>   <html lang="en" class="no-js ie ie7 lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8 ]>   <html lang="en" class="no-js ie ie8 lt-ie10 lt-ie9"><![endif]-->
+<!--[if IE 9 ]>   <html lang="en" class="no-js ie ie9 lt-ie10"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- [if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="imagetoolbar" content="false" />
+<![endif]-->
+    <?php echo $this->tag->getTitle(); ?>
+    <meta name="robots" content="noindex" />
+    <?php echo $this->tag->javascriptInclude("//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js", false); ?>
+    <?php echo $this->tag->stylesheetLink("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", false); ?>
+    <?php $this->assets->outputCss() ?>
+  </head>
+  <body class="theme-adminlte">
+
+<?php
+  echo $this->getContent();
+?>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<?php $this->assets->outputJs() ?>
+  </body>
+</html>

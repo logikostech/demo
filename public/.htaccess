@@ -1,0 +1,15 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # is the requested file a public file of an existing module?
+  # rewrite /appname/anything to /app/modules/appname/public/anything -f
+  RewriteCond %{REQUEST_URI} ^/public/([^/]+)/(.+)$
+  RewriteCond %{DOCUMENT_ROOT}/app/modules/%1/public/%2 -f
+  RewriteRule ^(.*)$ /app/modules/%1/public/%2 [L]
+  
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+</IfModule>

@@ -1,0 +1,39 @@
+{
+    "name": "logikostech/demo",
+    "type": "project",
+    "description": "logikostech project demo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tempcke",
+            "email": "tempcke@logikostech.net"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "public/vendor/{$name}": ["ckeditor/ckeditor"]
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/dnapierata/phalcon-sqlsrv"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-phalcon": "2.*",
+        "mnsami/composer-custom-directory-installer": "1.1.*",
+        "ckeditor/ckeditor": "4.*",
+        "phalcongelist/breadcrumbs": "^1.2",
+        "logikostech/common": "1.*@dev",
+        "logikostech/core": "1.*@dev",
+        "logikostech/http": "1.*@dev",
+        "logikostech/forms": "1.*@dev",
+        "logikostech/auth": "1.*@dev",
+        "dnapierata/phalcon-sqlsrv": "dev-master"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.1"
+    }
+}
