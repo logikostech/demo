@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "ext-phalcon": "2.*",
+        "ext-phalcon": ">=2.0",
         "mnsami/composer-custom-directory-installer": "1.1.*",
         "ckeditor/ckeditor": "4.*",
         "phalcongelist/breadcrumbs": "^1.2",
@@ -30,8 +30,7 @@
         "logikostech/core": "1.*@dev",
         "logikostech/http": "1.*@dev",
         "logikostech/forms": "1.*@dev",
-        "logikostech/auth": "1.*@dev",
-        "dnapierata/phalcon-sqlsrv": "dev-master"
+        "logikostech/auth": "1.*@dev"
     },
     "require-dev": {
         "codeception/codeception": "^2.1"
